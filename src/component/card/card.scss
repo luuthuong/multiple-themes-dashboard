@@ -1,0 +1,48 @@
+@use '../../scss/' as *;
+
+.card{
+    background-color: var(--mainBg);
+    box-shadow: var(--boxShadow);
+    @include flex(space-around,center);
+    user-select: none;
+    cursor: pointer;
+    border-radius:var(--borderRadius);
+    position: relative;
+    padding: 30px;
+    margin: 10px;
+    color: var(--txtColor);
+    overflow:hidden;
+    transition: color .3s ease;
+    i{
+        font-size: 40px;
+    }
+    &>*{
+        position: relative;
+        z-index: 2;
+    }
+    .content{
+        text-align: center;
+        .content-count{
+            margin:0 20px 10px ;
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        bottom: -50%;
+        left: -50%;
+        background-image: linear-gradient( to right,var(--mainColor) 30% ,var(--secondColor) 70% );
+        width: 50%;
+        height: 100%; 
+        border-radius: 50%;
+        transition: all .3s ease;
+
+    }
+    &:hover::before{
+        transform: scale(10);
+
+    }
+    &:hover{
+        color:var( --txtColor-white);
+    }
+}

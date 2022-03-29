@@ -1,0 +1,28 @@
+@use '../../scss/' as *;
+
+
+.table{
+    margin-top: 2rem;
+    border-spacing: 0;
+    width: 100%;
+    min-width: 400px;
+    thead{
+        background-color:var(--mainBg);
+        color: var(--txtColor);
+    }
+    tr{
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: var(--txtColor);
+    }   
+    th,td{
+        padding:15px 10px;
+        text-transform: capitalize;
+    }
+
+    tbody>tr:hover{
+        background-color:var(--mainColor);
+        color: var(--txtColor-white);
+    }
+}

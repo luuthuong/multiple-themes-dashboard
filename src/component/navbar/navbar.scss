@@ -1,0 +1,33 @@
+@use '../../scss/' as *;
+
+.navbar{
+    @include flex(space-between,center);
+    padding:2rem 2rem;
+    background-color: var(--mainBg);
+    position: relative;
+    @include mobile{
+        flex-direction: column;
+        &__right{
+            margin-top: 1.5rem;
+        }
+    }
+    &__right{
+        @include flex(center,center);
+        margin-right: 1rem;
+        &>*{
+            margin-left: 30px;
+        }
+        &__theme{
+            i{
+                color: var(--mainColor);
+                font-size: 22px;
+                transition: all .3s ease;
+                cursor: pointer;
+                &:hover{
+                    color: var(--mainColor);
+                }
+            }
+        }
+    }
+    
+}

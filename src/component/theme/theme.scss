@@ -1,0 +1,103 @@
+@use '../../scss/' as *;
+
+.theme{
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    width: 400px;
+    background-color:var(--secondBg);
+    box-shadow: var(--boxShadow);
+    z-index: 50;
+    text-transform:capitalize;
+    color: var(--txtColor);
+    @include mobile{
+        width: 100%;
+    }
+    &__header{
+        @include flex(space-between,center);
+        border-bottom: 1px solid var(--dropdownBgColor);
+        margin: 0 20px;
+        padding:10px 0;
+        i{
+            font-size: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all .3s ease;
+            &:hover{
+                color: var(--mainColor);
+            }
+        }
+    }
+    &__content{
+        &>*{
+            margin-top: 1rem;
+        }
+        .theme-options{
+            &__container{
+                @include flex(flex-start,center);
+            cursor:pointer;
+            font-weight: 500;
+                margin-top: 1rem;
+                padding:10px ;
+                .symbol-theme{
+                    margin-right: 20px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    text-align: center;
+                    i{
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: var(--mainColor);
+                    }
+                }
+                &:hover{
+                    background-color:var(--mainBg);
+                    color: var(--txtColor-white);
+                }
+            }
+        }
+    }
+    transform:scale(0);
+    transition: transform .2s ease-in-out;
+    &.active{
+        transform:scale(1);
+    }
+}
+.light{
+    background-color:white;
+}
+.dark{
+    background-color:black;
+}
+.blue{
+    background-color:rgb(10, 61, 156);
+    &>*{
+        color:#fff !important;
+    }
+}
+.red{
+    background-color:red;
+    &>*{
+        color:#fff !important;
+    }
+}
+.cyan{
+    background-color:rgb(20, 161, 161);
+    &>*{
+        color:#fff !important;
+    }
+}
+.green{
+    background-color:green;
+    &>*{
+        color:#fff !important;
+    }
+}
+.orange{
+    background-color:orange;
+    &>*{
+        color:#fff !important;
+    }
+}

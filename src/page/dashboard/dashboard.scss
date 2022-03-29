@@ -1,0 +1,75 @@
+@use '../../scss/'as *;
+@use 'sass:color';
+
+
+.row {
+    display: flex;
+    @include flex(space-around, center);
+    flex-wrap: wrap;
+    flex: 1;
+
+    &.card-tab {
+        box-shadow: var(--boxShadow);
+        border-radius: var(--borderRadius);
+        padding: 1rem;
+        height: 350px;
+
+        @include mobile {
+            width: 100%;
+            height: auto !important;
+            margin: 10px 0;
+        }
+    }
+}
+
+.wraper {
+    width: calc(100% - 20px);
+    box-shadow: var(--boxShadow);
+    border-radius: var(--borderRadius);
+    padding: 1rem;
+    height: 350px;
+    overflow:hidden;
+    background-color: var(--mainBg);
+    @include mobile {
+        width: 100%;
+        height: auto !important;
+        margin: 10px 0;
+    }
+}
+
+.header-title-table {
+    margin: 10px 10px 0;
+    color:var(--txtColor);
+}
+
+.table-footer {
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+
+    &:hover {
+        background-color: var(--thirdBg);
+
+        &>* {
+            color: var(--txtColor-white);
+        }
+    }
+}
+
+.status-item{
+    padding:5px;
+    color: var(--txtColor-white);
+    border-radius: var(--borderRadius);
+    &.shipping{
+        background-color:#349EFF;
+    }
+    &.paid{
+        background-color:#019707;
+    }
+    &.pending{
+        background-color:#D37F02;
+    }
+    &.refund{
+        background-color:#FB0B12;
+    }
+}

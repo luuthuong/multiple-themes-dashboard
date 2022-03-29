@@ -1,0 +1,54 @@
+@use '../../scss/' as *;
+
+.profile{
+    position: relative;
+    width: 150px;
+    &__overview{
+        width: 50px;
+        height: 50px;
+        @include flex(center,center);
+        cursor: pointer;
+        @include mobile{
+            flex-direction: column;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: all .3s ease;
+            margin-right: 10px;
+        }
+        &__name{
+            transition: all .3s ease;
+            font-weight: 600;
+            color: var(--txtColor);
+            user-select: none;
+        }
+
+        &:hover{
+            img{
+                opacity: .8;
+                transform: scale(1.1);
+            }
+            &>*~*{
+                color: var(--mainColor);
+            }
+        }
+    }
+
+    &__detail{
+        position:absolute;
+        left: 0;
+        &__dropdown{
+            position: relative;
+            z-index: 0;
+            height:0;
+            transition:all .5s ease-in-out;
+           transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &.active{
+                height:200px;
+                z-index: 10;
+            }
+        }
+    }
+}

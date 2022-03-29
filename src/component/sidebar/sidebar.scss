@@ -1,0 +1,93 @@
+@use '../../scss/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.sidebar {
+    width: var(--sidebarWidth);
+    height: 100vh;
+
+    background-color: var(--mainBg);
+    padding: var(--paddingOutline);
+    overflow:hidden;
+    &__logo {
+        width: 100%;
+        @include flex(center, center);
+        i {
+            font-size: 5rem;
+            color: var(--mainColor);
+        }
+        .header-logo {
+            font-family: 'Fredoka One', cursive;
+            user-select: none;
+            font-size: 4rem;
+            color: var(--txtColor);
+            font-weight: 600;
+        }
+    }
+    &__feature {
+        // width: 100%;
+        margin-top:2rem;
+        font-size: 20px;
+        &>*{
+            margin-top: 1rem;
+        }
+        .feature-item {
+            user-select: none;
+            -webkit-user-drag: none;
+            padding: var(--paddingOutline);
+            border-radius: 1.5rem;
+            height: 50px;
+            // line-height: 50px;
+            width: 100%;
+            @include flex(flex-start, center);
+            transition: background-color .3s ease;
+            &>*~*{
+                margin-left: 1rem;
+            }
+            &:hover {
+                background-color: var(--secondColor);
+            }
+            &.activeItem{
+                background-color: var(--secondColor);
+                color: var(--txtColor-white);
+            }
+        }
+    }
+
+    @include mobile{
+        width: 200px;
+        &__logo {
+            i {
+                font-size: 3rem;
+            }
+            .header-logo {
+                font-size: 2rem;
+            }
+        }
+        &__feature{
+            font-size: 16px;
+            .feature-item {
+                &>*~*{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @include tablet{
+        width: 250px;
+        &__logo {
+            i {
+                font-size: 4rem;
+            }
+            .header-logo {
+                font-size: 3rem;
+            }
+        }
+        &__feature{
+            font-size: 18px;
+        }
+    }
+  
+}
+
+
+

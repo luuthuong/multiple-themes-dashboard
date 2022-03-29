@@ -1,0 +1,32 @@
+@use '../../scss/' as *;
+.search{
+    @include flex(flex-start,center);
+    position: relative;
+    width: 300px;
+    &>*{
+        font-size: 16px;
+    }
+    .search-input {
+        padding: 10px 20px;
+        font-weight: 600;
+        letter-spacing:1.5px;
+        width: 100%;
+        box-shadow: var(--boxShadow);
+        border-radius: 1rem;
+        border: none;
+        height: 100%;
+        outline: none;
+        &:focus{
+            color:var(--mainColor);
+        }
+    }
+    i{
+        position: absolute;
+        right: 2px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover{
+            color:var(--mainColor);
+        }
+    }
+}

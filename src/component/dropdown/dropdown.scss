@@ -1,0 +1,29 @@
+@use '../../scss/' as *;
+
+.dropdown{
+    width: fit-content;
+    min-width: 150px;
+    max-width:350px;
+    border-radius: var(--borderRadius);
+    background-color:var(--secondBg);
+    box-shadow: var(--boxShadow);
+    overflow: hidden;
+    &>*~*{
+        margin-top: var(--marginTop);
+    }
+    &__item{
+        @include flex(flex-start,center);
+        color: var(--txtColor);
+        font-size: 16px;
+        padding:10px;
+        cursor: pointer;
+        &>*~*{
+            margin-left: 1rem;
+        }
+        transition:all .3s ease;
+        &:hover{
+            background-color:var(--thirdBg);
+            color:var(--txtColor-white);
+        }
+    }
+}

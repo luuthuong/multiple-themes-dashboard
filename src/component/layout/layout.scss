@@ -1,0 +1,35 @@
+@use '../../scss/' as *;
+.layout{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    &__content{
+        width: 100%;
+    }
+    &.dark {
+        --mainBg: var(--mainBg-Dark );
+        --secondBg:var(--secondBg-Dark);
+        --txtColor:var(--txtColor-Dark);
+        --boxShadow: var(--boxShadow-Dark);
+    }
+    &.color-red{
+        --mainColor:var(--mainColor-Red);
+        --secondColor:var(--secondColor-Red);
+    }
+    &.color-blue{
+        --mainColor:var(--mainColor-Blue);
+        --secondColor:var(--secondColor-Blue);
+    }
+    &.color-green{
+        --mainColor:var(--mainColor-Green);
+        --secondColor:var(--secondColor-Green);
+    }
+    &.color-cyan{
+        --mainColor:var(--mainColor-Cyan);
+        --secondColor:var(--secondColor-Cyan);
+    }
+    &.color-orange{
+        --mainColor:var(--mainColor-Orange);
+        --secondColor:var(--secondColor-Orange);
+    }
+}

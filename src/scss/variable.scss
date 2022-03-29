@@ -1,0 +1,54 @@
+:root{
+--dropdownBgColor:#d6dadd;
+
+--borderRadius:1rem;
+--boxShadow:rgba(0, 0, 0, 0.22) 0px 1px 4px 0;
+--marginTop:1rem;
+--sidebarWidth:300px;
+--paddingOutline:5px 1rem;
+--mobileWidth:600px;
+--tabletWidth:1024px;
+
+--mainBg-Light: #ffffff;
+--secondBg-Light: #fafafb;
+--txtColor-Light: #455560;
+--boxShadow-Light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+--mainBg-Dark: #2d2d2d;
+--secondBg-Dark: #202020;
+--txtColor-Dark: #bbbbbb;
+--boxShadow-Dark: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+
+--mainColor-Blue: #349eff;
+--secondColor-Blue: #62b4ff;
+
+--mainColor-Red: #fb0b12;
+--secondColor-Red: #ff4a6b;
+
+--mainColor-Cyan: #10d4d2;
+--secondColor-Cyan: #2ae9e6;
+
+--mainColor-Green: #019707;
+--secondColor-Green: #4caf50;
+
+--mainColor-Orange: #d68102;
+--secondColor-Orange: #fca11a;
+
+
+--mainBg: var(--mainBg-Light );
+--secondBg:var(--secondBg-Light);
+--thirdBg:#808088;
+--txtColor:#455560;
+--txtColor-white:#fff;
+--mainColor:#4FABFF;
+--secondColor:#2E8DE3;
+
+}
+@mixin dark($active:false){
+    @if $active {
+        $mainBg:$mainBg-Light;
+    }
+    @else{
+        $mainBg:$mainBg-Dark;
+    }
+}

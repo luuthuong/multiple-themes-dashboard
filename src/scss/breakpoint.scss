@@ -1,0 +1,12 @@
+@use './variable.scss' as *;
+
+@mixin mobile {
+    @media screen and (max-width: var(--mobileWidth)) {
+        @content
+    }
+};
+@mixin tablet {
+    @media screen and (max-width: var(--tabletWidth)) {
+        @content
+    }
+}
