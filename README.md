@@ -4,6 +4,9 @@ Google font: https://fonts.google.com/
 
 Boxicons: https://boxicons.com/
 
+ApexChart: https://apexcharts.com/
+
+React-Redux: https://react-redux.js.org/
 
 # Preview
 
