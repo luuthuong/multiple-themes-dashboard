@@ -4,10 +4,13 @@ const getColor=(item)=>item.color;
 
 const getTheme=(item)=>item.theme;
 
+const getDataTable=(item)=>item.dataTable
+
 const selector={
     getItem,
     getColor,
-    getTheme
+    getTheme,
+    getDataTable
 }
 
 export default selector;

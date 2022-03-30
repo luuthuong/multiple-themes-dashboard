@@ -1,7 +1,8 @@
 const initialState ={
     toggleTheme:false,
     color:'color-blue',
-    theme:'light'
+    theme:'light',
+    dataTable:[]
 }
 
 const reducer=(state=initialState,action) => {
@@ -21,6 +22,11 @@ const reducer=(state=initialState,action) => {
             return{
                 ...state,
                 theme:action.payload
+            }
+        case 'Load_Data_Table':
+            return{
+                ...state,
+                dataTable:action.payload
             }
         default:
             return state;
